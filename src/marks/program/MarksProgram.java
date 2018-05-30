@@ -33,14 +33,14 @@ public class MarksProgram extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        MarkFiled = new javax.swing.JTextField();
+        AddButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        MarkArea = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        OutputArea = new javax.swing.JTextArea();
+        SortButton = new javax.swing.JButton();
+        AnAlyzeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,38 +50,42 @@ public class MarksProgram extends javax.swing.JFrame {
 
         jLabel2.setText("Student Marks");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        MarkFiled.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                MarkFiledActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Add");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        AddButton.setText("Add");
+        AddButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AddButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jScrollPane1.setHorizontalScrollBar(null);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        MarkArea.setColumns(20);
+        MarkArea.setRows(5);
+        jScrollPane1.setViewportView(MarkArea);
 
-        jButton2.setText("Sort");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jScrollPane2.setHorizontalScrollBar(null);
+
+        OutputArea.setColumns(20);
+        OutputArea.setRows(5);
+        jScrollPane2.setViewportView(OutputArea);
+
+        SortButton.setText("Sort");
+        SortButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SortButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Analyze");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        AnAlyzeButton.setText("Analyze");
+        AnAlyzeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AnAlyzeButtonActionPerformed(evt);
             }
         });
 
@@ -101,18 +105,18 @@ public class MarksProgram extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MarkFiled, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
-                        .addComponent(jButton1))
+                        .addComponent(AddButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(56, 56, 56)
-                .addComponent(jButton2)
+                .addComponent(SortButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(AnAlyzeButton)
                 .addGap(75, 75, 75))
         );
         jPanel1Layout.setVerticalGroup(
@@ -123,16 +127,16 @@ public class MarksProgram extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(MarkFiled, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(SortButton)
+                    .addComponent(AnAlyzeButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -150,25 +154,25 @@ public class MarksProgram extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void MarkFiledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarkFiledActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_MarkFiledActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
        double grade;
-       Collections.addAll(marks, Integer.parseInt(jTextField1.getText()));
+       Collections.addAll(marks, Integer.parseInt(MarkFiled.getText()));
        
        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_AddButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void SortButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortButtonActionPerformed
         Collections.sort(marks);
         for (int i=0;i<marks.size();i++){
-            jTextArea1.setText(jTextArea1.getText()+marks.get(i)+"\n");
+            MarkArea.setText(MarkArea.getText()+marks.get(i)+"\n");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_SortButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void AnAlyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnAlyzeButtonActionPerformed
         int sum = 0,Level1 = 0,Level2 = 0,Level3 = 0,Level4 = 0,LevelR = 0;
         
         for (int i=0;i<marks.size();i++){
@@ -189,22 +193,22 @@ public class MarksProgram extends javax.swing.JFrame {
         else if (number<50){
             LevelR ++;
         }              
-        jTextArea2.setText("Class average: "+sum/marks.size()+"%\n");
+        OutputArea.setText("Class average: "+sum/marks.size()+"%\n");
         int Max = Collections.max(marks);
         int Min = Collections.min(marks);
         int RangeofMarks = Max - Min;
-        jTextArea2.setText(jTextArea2.getText()+"Maximim mark:" + Max+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Minimum mark:" + Min+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Range of mark:" + RangeofMarks+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Number at LeveL 4:" + Level4+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Number at LeveL 3:" + Level3+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Number at LeveL 2:" + Level2+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Number at LeveL 1:" + Level1+"\n");
-        jTextArea2.setText(jTextArea2.getText()+"Number at LeveL R:" + LevelR+"\n");
+        OutputArea.setText(OutputArea.getText()+"Maximim mark:" + Max+"\n");
+        OutputArea.setText(OutputArea.getText()+"Minimum mark:" + Min+"\n");
+        OutputArea.setText(OutputArea.getText()+"Range of mark:" + RangeofMarks+"\n");
+        OutputArea.setText(OutputArea.getText()+"Number at LeveL 4:" + Level4+"\n");
+        OutputArea.setText(OutputArea.getText()+"Number at LeveL 3:" + Level3+"\n");
+        OutputArea.setText(OutputArea.getText()+"Number at LeveL 2:" + Level2+"\n");
+        OutputArea.setText(OutputArea.getText()+"Number at LeveL 1:" + Level1+"\n");
+        OutputArea.setText(OutputArea.getText()+"Number at LeveL R:" + LevelR+"\n");
        
             
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_AnAlyzeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,17 +246,17 @@ public class MarksProgram extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton AddButton;
+    private javax.swing.JButton AnAlyzeButton;
+    private javax.swing.JTextArea MarkArea;
+    private javax.swing.JTextField MarkFiled;
+    private javax.swing.JTextArea OutputArea;
+    private javax.swing.JButton SortButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
    
